@@ -1,10 +1,13 @@
 {
-  "name": "kronos",
+  "name": "@verzach3/kronos",
   "version": "1.0.0",
   "description": "A sync library for games",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/Verzach3/kronos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verzach3/kronos.git"
+  },
   "author": "Verzach3",
   "license": "MIT",
   "devDependencies": {
@@ -17,5 +20,9 @@
   },
   "scripts": {
     "prepare": "tsc"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Verzach3/kronos/issues"
+  },
+  "homepage": "https://github.com/Verzach3/kronos#readme"
 }
