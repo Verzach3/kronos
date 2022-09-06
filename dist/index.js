@@ -1,7 +1,12 @@
 "use strict";
-_kronos = new Map();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.useKronosState = void 0;
+global._kronos = new Map();
 class useKronosState {
     constructor(defaultValue, id) {
+        if (global._kronos === undefined) {
+            global._kronos = new Map();
+        }
         this.id = id;
         this.setValue(defaultValue);
     }
@@ -15,4 +20,4 @@ class useKronosState {
         return this.getValue();
     }
 }
-module.exports = useKronosState;
+exports.useKronosState = useKronosState;

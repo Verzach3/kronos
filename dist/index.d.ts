@@ -1,4 +1,3 @@
-declare var _kronos: Map<string, {}>;
 declare class useKronosState {
     id: string;
     constructor(defaultValue: {}, id: string);
@@ -6,3 +5,4 @@ declare class useKronosState {
     private getValue;
     get value(): {} | undefined;
 }
+export { useKronosState };

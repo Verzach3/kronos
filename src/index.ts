@@ -1,9 +1,12 @@
-declare var _kronos: Map<string, {}>;
-_kronos = new Map<string, {}>();
+
+global._kronos = new Map<string, {}>();
 
 class useKronosState {
   id: string;
   constructor(defaultValue: {}, id: string) {
+    if (global._kronos === undefined) {
+      global._kronos = new Map<string, {}>();
+    }
     this.id = id;
     this.setValue(defaultValue);
   }
@@ -21,4 +24,4 @@ class useKronosState {
   }
 }
 
-module.exports = useKronosState;
+export { useKronosState }
