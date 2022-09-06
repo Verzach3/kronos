@@ -1,4 +1,6 @@
 declare global {
-  var _kronos: Map<string, {}>
+  interface Window {
+    _kronos: Map<string, {}>
+  }
 }
 export {}

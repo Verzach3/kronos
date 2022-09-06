@@ -1,22 +1,22 @@
 
-global._kronos = new Map<string, {}>();
+window._kronos = new Map<string, {}>();
 
 class useKronosState {
   id: string;
   constructor(defaultValue: {}, id: string) {
-    if (global._kronos === undefined) {
-      global._kronos = new Map<string, {}>();
+    if (window._kronos === undefined) {
+      window._kronos = new Map<string, {}>();
     }
     this.id = id;
     this.setValue(defaultValue);
   }
 
   setValue(newValue: {}) {
-    global._kronos.set(this.id, newValue);
+    window._kronos.set(this.id, newValue);
   }
 
   private getValue() {
-    return global._kronos.get(this.id);
+    return window._kronos.get(this.id);
   }
 
   get value() {
